@@ -4,9 +4,12 @@ using UnityEngine;
 
 public enum GunType { Semi, Burst, Auto };
 
+
+
 public class gun : MonoBehaviour
 {
-
+    public LayerMask collisionmask;
+    public float GunID;
     public GunType gunType;
     public float rpm;
 
@@ -41,9 +44,11 @@ public class gun : MonoBehaviour
 
             float shotDistance = 20;
 
-            if (Physics.Raycast(ray, out hit, shotDistance))
+            if (Physics.Raycast(ray, out hit, shotDistance, collisionmask))
             {
                 shotDistance = hit.distance;
+
+                if (hit.collider)
 
             }
 
