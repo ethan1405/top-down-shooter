@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class shell : MonoBehaviour
+public class Shell : MonoBehaviour
 {
 
     private float lifeTime = 5;

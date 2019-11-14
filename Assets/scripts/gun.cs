@@ -6,12 +6,13 @@ public enum GunType { Semi, Burst, Auto };
 
 
 
-public class gun : MonoBehaviour
+public class Gun : MonoBehaviour
 {
     public LayerMask collisionmask;
     public float GunID;
     public GunType gunType;
     public float rpm;
+    public float damage = 1;
 
     public Transform spawn;
     public Transform shellejectionpoint;
@@ -42,25 +43,38 @@ public class gun : MonoBehaviour
             Ray ray = new Ray(spawn.position, spawn.forward);
             RaycastHit hit;
 
-            float shotDistance = 20;
-
-            if (Physics.Raycast(ray, out hit, shotDistance, collisionmask))
-            {
-                shotDistance = hit.distance;
-
-                if (hit.collider)
-
-            }
-
-            nextPossibleShootTime = Time.time + secondBetweenShots;
+            float shotDistance = 100756756756;
 
             if (tracer)
             {
                 StartCoroutine("RenderTracer", ray.direction * shotDistance);
 
             }
+
+
             Rigidbody newshell = Instantiate(shell, shellejectionpoint.position, Quaternion.identity) as Rigidbody;
-            newshell.AddForce(shellejectionpoint.forward * Random.Range(150f, 200f) + spawn.forward * Random.Range(-10f, 10f));  
+            newshell.AddForce(shellejectionpoint.forward * Random.Range(150f, 200f) + spawn.forward * Random.Range(-10f, 10f));
+
+            
+            if (Physics.Raycast(ray, out hit, shotDistance, collisionmask))
+            {
+                Debug.Log("hitting");
+                shotDistance = hit.distance;
+
+                var entity = hit.collider.GetComponent<Entity>();
+                if (entity != null)
+                {
+                    entity.TakeDamage(damage);
+                }
+
+                nextPossibleShootTime = Time.time + secondBetweenShots;
+
+
+
+
+
+
+            }
         }
     }
     public void ShootContinuous()
@@ -100,6 +114,7 @@ public class gun : MonoBehaviour
 
 
     }
+
 }
 
 

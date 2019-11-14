@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player : entity
+public class Player : Entity
 {
     public override void Die()
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class entity : MonoBehaviour
+public class Entity : MonoBehaviour
 {
     public float health;
 
