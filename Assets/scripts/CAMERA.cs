@@ -18,6 +18,6 @@ public class CAMERA  : MonoBehaviour {
     void Update()
     {
         cameratarget = new Vector3 (target.position.x, transform.position.y,target.position.z);
-        transform.position = Vector3.Lerp(transform.position, cameratarget,Time.deltaTime * 8);
+        transform.position = Vector3.Lerp(transform.position, cameratarget,Time.deltaTime * 6);
     }
 }
