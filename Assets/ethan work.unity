@@ -262,7 +262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 450
   walkSpeed: 6
-  runSpeed: 10
+  runSpeed: 50
   gun: {fileID: 1172559106}
 --- !u!143 &557213565
 CharacterController:
@@ -349,7 +349,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557213563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 24.82, y: 0.5, z: -16.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1232041386}
@@ -798,7 +798,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.7071037, y: 0.002087278, z: -0.0024576227, w: 0.70710254}
-  m_LocalPosition: {x: 0, y: 15, z: -0.51}
+  m_LocalPosition: {x: 0, y: 15, z: 1.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1269,8 +1269,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172559101}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.03, y: -0.05, z: -0.07}
-  m_LocalScale: {x: 0.47709, y: 0.26482, z: 0.22404921}
+  m_LocalPosition: {x: -0.02, y: -0.05, z: 0.21}
+  m_LocalScale: {x: 0.85460293, y: 0.26482, z: 0.22404921}
   m_Children:
   - {fileID: 953806955}
   - {fileID: 1264059413}
@@ -1376,7 +1376,7 @@ LineRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 4d571aefc6df473499e5c4eeed3657bb, type: 2}
-  - {fileID: 2100000, guid: 4d571aefc6df473499e5c4eeed3657bb, type: 2}
+  - {fileID: 2100000, guid: ee270a8ab6180ea46bcfc3c4d301f82c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1420,7 +1420,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.7568628, g: 0.7568628, b: 0.7568628, a: 1}
+      key0: {r: 0.6509434, g: 0.61989015, b: 0.26713246, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -1428,8 +1428,8 @@ LineRenderer:
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
-      ctime1: 65535
+      ctime0: 32382
+      ctime1: 54741
       ctime2: 0
       ctime3: 0
       ctime4: 0
@@ -1451,8 +1451,8 @@ LineRenderer:
     numCapVertices: 0
     alignment: 0
     textureMode: 0
-    shadowBias: 0.5
-    generateLightingData: 0
+    shadowBias: 0.56
+    generateLightingData: 1
   m_UseWorldSpace: 1
   m_Loop: 0
 --- !u!1 &1232041385
@@ -2379,7 +2379,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992804691}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.45, y: 0, z: 5.23}
+  m_LocalPosition: {x: 4.45, y: 0, z: 5.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 638796665}

@@ -27,8 +27,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        ControlMouse();
-        //ControlWASD();
+        //ControlMouse();
+        ControlWASD();
 
 
 
