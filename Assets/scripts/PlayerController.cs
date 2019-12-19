@@ -27,8 +27,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //ControlMouse();
-        ControlWASD();
+        ControlMouse();
+        //ControlWASD();
 
 
 
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
             Vector3 mousePos = Input.mousePosition;
             mousePos = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, cam.transform.position.y - transform.position.y));
             targetRotation = Quaternion.LookRotation(mousePos - new Vector3(transform.position.x, 0, transform.position.z));
-            transform.eulerAngles = Vector3.up * Mathf.MoveTowardsAngle(transform.eulerAngles.y, targetRotation.eulerAngles.y, rotationSpeed = 7);
+            transform.eulerAngles = Vector3.up * Mathf.MoveTowardsAngle(transform.eulerAngles.y, targetRotation.eulerAngles.y, rotationSpeed = 20);
 
             Vector3 input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
             currentVelocityMod = Vector3.MoveTowards(currentVelocityMod, input, accelaration * Time.deltaTime);
